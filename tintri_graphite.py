@@ -104,9 +104,9 @@ if len(sys.argv) < 4:
     print("Usage: " + sys.argv[0] + " server_name user_name password\n")
     sys.exit(-1)
 
-server_name = sys.argv[1]
-user_name = sys.argv[2]
-password = sys.argv[3]
+sever_name = os.environ.get('vmstore_fqdn', sys.argv[1])
+user_name = os.environ.get('vmstore_username', sys.argv[2])
+password = os.environ.get('vmstore_password', sys.argv[3])
 server_name_formatted = server_name.replace(".", "_")
 
 # Get the preferred version
