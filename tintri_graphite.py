@@ -24,6 +24,7 @@
 # THE SOFTWARE.
 
 import json
+import os
 import socket
 import sys
 import time
@@ -99,14 +100,21 @@ def get_vmstore(session_id):
 
 
 # main
-if len(sys.argv) < 4:
+if os.environ.get('vmstore_fqdn') is not None and os.environ.get('vmstore_username') is not None and os.environ.get('vmstore_password') is not None:
+    server_name = os.environ.get('vmstore_fqdn')
+    user_name = os.environ.get('vmstore_username')
+    password = os.environ.get('vmstore_password')
+    print("Using parameters found in your environment\n")
+elif len(sys.argv) == 4:
+    server_name = sys.argv[1]
+    user_name = sys.argv[2]
+    password = sys.argv[3]
+    print("Using paramerts passed in on the command line\n")
+else:
     print("\nPrints VMstore information\n")
     print("Usage: " + sys.argv[0] + " server_name user_name password\n")
     sys.exit(-1)
 
-sever_name = os.environ.get('vmstore_fqdn', sys.argv[1])
-user_name = os.environ.get('vmstore_username', sys.argv[2])
-password = os.environ.get('vmstore_password', sys.argv[3])
 server_name_formatted = server_name.replace(".", "_")
 
 # Get the preferred version
