@@ -101,14 +101,14 @@ if os.environ.get('vmstore_fqdn') is not None and os.environ.get('vmstore_userna
     user_name = os.environ.get('vmstore_username')
     password = os.environ.get('vmstore_password')
     graphite_server = os.environ.get('graphite_fqdn')
-    graphite_port = os.environ.get('graphite_port')
+    graphite_port = int(os.environ.get('graphite_port'))
     print("Using parameters found in your environment\n")
 elif len(sys.argv) == 6:
     server_name = sys.argv[1]
     user_name = sys.argv[2]
     password = sys.argv[3]
     graphite_server = sys.argv[4]
-    graphite_port = sys.argv[5]
+    graphite_port = int(sys.argv[5])
     print("Using paramerts passed in on the command line\n")
 else:
     print("\nPrints VMstore information\n")
