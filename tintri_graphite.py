@@ -40,10 +40,6 @@ import tintri_1_1 as tintri
 # For exhaustive messages on console, make it to True; otherwise keep it False
 debug_mode = False
 
-# Graphite server connection details
-graphite_server = '127.0.0.1'
-graphite_port = 2003
-
 # Polling interval in seconds
 interval = int(5)
 
@@ -100,19 +96,23 @@ def get_vmstore(session_id):
 
 
 # main
-if os.environ.get('vmstore_fqdn') is not None and os.environ.get('vmstore_username') is not None and os.environ.get('vmstore_password') is not None:
+if os.environ.get('vmstore_fqdn') is not None and os.environ.get('vmstore_username') is not None and os.environ.get('vmstore_password') is not None and os.environ.get('graphite_fqdn') is not None and os.environ.get('graphite_port') is not None:
     server_name = os.environ.get('vmstore_fqdn')
     user_name = os.environ.get('vmstore_username')
     password = os.environ.get('vmstore_password')
+    graphite_server = os.environ.get('graphite_fqdn')
+    graphite_port = os.environ.get('graphite_port')
     print("Using parameters found in your environment\n")
-elif len(sys.argv) == 4:
+elif len(sys.argv) == 6:
     server_name = sys.argv[1]
     user_name = sys.argv[2]
     password = sys.argv[3]
+    graphite_server = sys.argv[4]
+    graphite_port = sys.argv[5]
     print("Using paramerts passed in on the command line\n")
 else:
     print("\nPrints VMstore information\n")
-    print("Usage: " + sys.argv[0] + " server_name user_name password\n")
+    print("Usage: " + sys.argv[0] + " vmstore_fqdn vmstore_username vmstore_password graphite_fqdn graphite_port\n")
     sys.exit(-1)
 
 server_name_formatted = server_name.replace(".", "_")
