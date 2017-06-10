@@ -50,59 +50,7 @@
       "height": "100px",
       "panels": [
         {
-          "title": "Latency",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 3,
-          "targets": [
-            {
-              "refId": "A",
-              "target": "tintri.$VMSTORE.vmstore.latencyTotalMs"
-            }
-          ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
           "cacheTimeout": null,
-          "format": "ms",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
-          "valueMaps": [
-            {
-              "value": "null",
-              "op": "=",
-              "text": "N/A"
-            }
-          ],
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "rangeMaps": [
-            {
-              "from": "null",
-              "to": "null",
-              "text": "N/A"
-            }
-          ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "5,10",
           "colorBackground": true,
           "colorValue": false,
           "colors": [
@@ -110,51 +58,23 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(245, 54, 54, 0.9)"
           ],
-          "sparkline": {
-            "show": true,
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
-          },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "decimals": 2
-        },
-        {
-          "title": "IOPS",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 2,
-          "targets": [
-            {
-              "refId": "A",
-              "target": "tintri.$VMSTORE.vmstore.operationsTotalIops"
-            }
-          ],
-          "links": [],
           "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "format": "ms",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "id": 3,
           "interval": null,
-          "cacheTimeout": null,
-          "format": "iops",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
-          "valueMaps": [
-            {
-              "value": "null",
-              "op": "=",
-              "text": "N/A"
-            }
-          ],
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -165,150 +85,150 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
+          "span": 2,
           "sparkline": {
-            "show": true,
+            "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": false,
             "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
+            "show": true
           },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 2
-        },
-        {
-          "title": "Throughput",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 6,
           "targets": [
             {
               "refId": "A",
-              "target": "tintri.$VMSTORE.vmstore.throughputTotalMBps"
+              "target": "tintri.$VMSTORE.vmstore.latencyTotalMs"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "MBs",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "5,10",
+          "title": "Latency",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "rangeMaps": [
-            {
-              "from": "null",
-              "to": "null",
-              "text": "N/A"
-            }
-          ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
-          "colorBackground": false,
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
           "colorValue": false,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "sparkline": {
-            "show": true,
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
-          },
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "percent",
           "gauge": {
-            "show": false,
-            "minValue": 0,
             "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
           },
           "height": "",
-          "decimals": 2
-        },
-        {
-          "title": "Flash Hits",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
           "id": 7,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
           "targets": [
             {
               "refId": "A",
               "target": "tintri.$VMSTORE.vmstore.flashHitPercent"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "percent",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "95,98",
+          "title": "Flash Hits",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 0,
+          "editable": true,
+          "error": false,
+          "format": "percent",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": true,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 8,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -319,73 +239,73 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "95,98",
-          "colorBackground": true,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
+          "span": 4,
           "sparkline": {
-            "show": true,
+            "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": false,
             "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
+            "show": true
           },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 0
-        },
-        {
-          "title": "Performance Reserves Remaining",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 8,
           "targets": [
             {
               "refId": "A",
               "target": "tintri.$VMSTORE.vmstore.performanceReserveRemaining"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "percent",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "10,20",
+          "title": "Performance Reserves Remaining",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "format": "iops",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 2,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -396,97 +316,279 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "refId": "A",
+              "target": "tintri.$VMSTORE.vmstore.operationsTotalIops"
+            }
+          ],
+          "thresholds": "",
+          "title": "Total IOPS",
+          "type": "singlestat",
           "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "10,20",
-          "colorBackground": true,
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
           "colorValue": false,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "sparkline": {
-            "show": true,
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
-          },
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "format": "iops",
           "gauge": {
-            "show": false,
-            "minValue": 0,
             "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": true
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
           },
           "height": "",
-          "decimals": 0
+          "id": 15,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "refId": "A",
+              "target": "tintri.$VMSTORE.vmstore.normalizedTotalIops"
+            }
+          ],
+          "thresholds": "",
+          "title": "Normalized IOPS",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
         },
         {
-          "title": "Request Size",
-          "error": false,
-          "span": 2,
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
           "editable": true,
-          "type": "singlestat",
+          "error": false,
+          "format": "MBs",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 6,
+          "interval": null,
           "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
+          "targets": [
+            {
+              "refId": "A",
+              "target": "tintri.$VMSTORE.vmstore.throughputTotalMBps"
+            }
+          ],
+          "thresholds": "",
+          "title": "Throughput",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 1,
+          "editable": true,
+          "error": false,
+          "format": "kbytes",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
           "id": 9,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 2,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": true
+          },
           "targets": [
             {
               "refId": "A",
               "target": "tintri.$VMSTORE.vmstore.requestSizeKiB"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "kbytes",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "",
+          "title": "Request Size",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "rangeMaps": [
-            {
-              "from": "null",
-              "to": "null",
-              "text": "N/A"
-            }
-          ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
           "colorBackground": false,
           "colorValue": false,
           "colors": [
@@ -494,52 +596,24 @@
             "rgba(237, 129, 40, 0.89)",
             "rgba(50, 172, 45, 0.97)"
           ],
-          "sparkline": {
-            "show": true,
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
-          },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 1
-        },
-        {
-          "title": "Clone Dedup Factor",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 11,
-          "targets": [
-            {
-              "refId": "A",
-              "target": "tintri.$VMSTORE.vmstore.cloneDedupeFactor"
-            }
-          ],
-          "links": [],
           "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
+          "decimals": 1,
+          "editable": true,
+          "error": false,
           "format": "short",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
-          "valueMaps": [
-            {
-              "value": "null",
-              "op": "=",
-              "text": "N/A"
-            }
-          ],
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 12,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -550,73 +624,73 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
+          "span": 2,
           "sparkline": {
-            "show": true,
+            "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": false,
             "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
+            "show": true
           },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 1
-        },
-        {
-          "title": "Compression Factor",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 12,
           "targets": [
             {
               "refId": "A",
               "target": "tintri.$VMSTORE.vmstore.compressionFactor"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "short",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "",
+          "title": "Compression Factor",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 1,
+          "editable": true,
+          "error": false,
+          "format": "short",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 13,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -627,73 +701,73 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
+          "span": 2,
           "sparkline": {
-            "show": true,
+            "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": false,
             "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
+            "show": true
           },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 1
-        },
-        {
-          "title": "Dedup Factor",
-          "error": false,
-          "span": 2,
-          "editable": true,
-          "type": "singlestat",
-          "isNew": true,
-          "id": 13,
           "targets": [
             {
               "refId": "A",
               "target": "tintri.$VMSTORE.vmstore.dedupeFactor"
             }
           ],
-          "links": [],
-          "datasource": "${DS_GRAPHITE}",
-          "maxDataPoints": 100,
-          "interval": null,
-          "cacheTimeout": null,
-          "format": "short",
-          "prefix": "",
-          "postfix": "",
-          "nullText": null,
+          "thresholds": "",
+          "title": "Dedup Factor",
+          "type": "singlestat",
+          "valueFontSize": "80%",
           "valueMaps": [
             {
-              "value": "null",
               "op": "=",
-              "text": "N/A"
+              "text": "N/A",
+              "value": "null"
             }
           ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 1,
+          "editable": true,
+          "error": false,
+          "format": "short",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "",
+          "id": 11,
+          "interval": null,
+          "isNew": true,
+          "links": [],
+          "mappingType": 1,
           "mappingTypes": [
             {
               "name": "value to text",
@@ -704,57 +778,60 @@
               "value": 2
             }
           ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
           "rangeMaps": [
             {
               "from": "null",
-              "to": "null",
-              "text": "N/A"
+              "text": "N/A",
+              "to": "null"
             }
           ],
-          "mappingType": 1,
-          "nullPointMode": "connected",
-          "valueName": "current",
-          "prefixFontSize": "50%",
-          "valueFontSize": "80%",
-          "postfixFontSize": "50%",
-          "thresholds": "",
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
+          "span": 2,
           "sparkline": {
-            "show": true,
+            "fillColor": "rgba(31, 118, 189, 0.18)",
             "full": false,
             "lineColor": "rgb(31, 120, 193)",
-            "fillColor": "rgba(31, 118, 189, 0.18)"
+            "show": true
           },
-          "gauge": {
-            "show": false,
-            "minValue": 0,
-            "maxValue": 100,
-            "thresholdMarkers": true,
-            "thresholdLabels": false
-          },
-          "height": "",
-          "decimals": 1
+          "targets": [
+            {
+              "refId": "A",
+              "target": "tintri.$VMSTORE.vmstore.cloneDedupeFactor"
+            }
+          ],
+          "thresholds": "",
+          "title": "Clone Dedup Factor",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
         }
       ],
-      "title": "Quick Stats",
-      "showTitle": true
+      "showTitle": true,
+      "title": "Quick Stats"
     },
     {
-      "title": "Detailed Stats",
-      "height": "250px",
-      "editable": true,
       "collapse": false,
+      "editable": true,
+      "height": "350px",
       "panels": [
         {
           "aliasColors": {},
           "bars": false,
           "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
           "editable": true,
           "error": false,
           "fill": 1,
@@ -764,19 +841,19 @@
             "threshold2": null,
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
-          "id": 4,
+          "id": 18,
           "isNew": true,
           "legend": {
             "alignAsTable": true,
             "avg": true,
             "current": true,
             "hideEmpty": true,
+            "hideZero": true,
             "max": true,
             "min": false,
             "show": true,
             "total": false,
-            "values": true,
-            "hideZero": true
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -787,7 +864,7 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 4,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -854,13 +931,13 @@
               "min": null,
               "show": true
             }
-          ],
-          "decimals": 2
+          ]
         },
         {
           "aliasColors": {},
           "bars": false,
           "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
           "editable": true,
           "error": false,
           "fill": 1,
@@ -870,19 +947,19 @@
             "threshold2": null,
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
-          "id": 1,
+          "id": 19,
           "isNew": true,
           "legend": {
             "alignAsTable": true,
             "avg": true,
             "current": true,
             "hideEmpty": true,
+            "hideZero": true,
             "max": true,
             "min": false,
             "show": true,
             "total": false,
-            "values": true,
-            "hideZero": true
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -893,13 +970,13 @@
           "points": false,
           "renderer": "flot",
           "seriesOverrides": [],
-          "span": 4,
+          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
               "refId": "A",
-              "target": "alias(tintri.$VMSTORE.vmstore.normalizedTotalIops, 'Total')"
+              "target": "alias(tintri.$VMSTORE.vmstore.operationsTotalIops, 'Total')"
             },
             {
               "refId": "B",
@@ -940,99 +1017,22 @@
               "min": null,
               "show": true
             }
-          ],
-          "decimals": 2
-        },
+          ]
+        }
+      ],
+      "showTitle": true,
+      "title": "Latency & IOPS Details"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "250px",
+      "panels": [
         {
           "aliasColors": {},
           "bars": false,
           "datasource": "${DS_GRAPHITE}",
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {
-            "threshold1": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2": null,
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "id": 5,
-          "isNew": true,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": true,
-            "hideEmpty": true,
-            "max": true,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": true,
-            "hideZero": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 4,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "refId": "A",
-              "target": "alias(tintri.$VMSTORE.vmstore.throughputTotalMBps, 'Total')"
-            },
-            {
-              "refId": "B",
-              "target": "alias(tintri.$VMSTORE.vmstore.throughputReadMBps, 'Read')"
-            },
-            {
-              "refId": "C",
-              "target": "alias(tintri.$VMSTORE.vmstore.throughputWriteMBps, 'Write')"
-            }
-          ],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "Throughput",
-          "tooltip": {
-            "msResolution": true,
-            "shared": true,
-            "sort": 0,
-            "value_type": "cumulative"
-          },
-          "type": "graph",
-          "xaxis": {
-            "show": true
-          },
-          "yaxes": [
-            {
-              "format": "MBs",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ],
-          "decimals": 2
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
           "editable": true,
           "error": false,
           "fill": 1,
@@ -1049,12 +1049,12 @@
             "avg": true,
             "current": true,
             "hideEmpty": true,
+            "hideZero": true,
             "max": true,
             "min": false,
             "show": true,
             "total": false,
-            "values": true,
-            "hideZero": true
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -1116,13 +1116,99 @@
               "min": null,
               "show": true
             }
-          ],
-          "decimals": 2
+          ]
         },
         {
           "aliasColors": {},
           "bars": false,
           "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(tintri.$VMSTORE.vmstore.throughputTotalMBps, 'Total')"
+            },
+            {
+              "refId": "B",
+              "target": "alias(tintri.$VMSTORE.vmstore.throughputReadMBps, 'Read')"
+            },
+            {
+              "refId": "C",
+              "target": "alias(tintri.$VMSTORE.vmstore.throughputWriteMBps, 'Write')"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Throughput",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "MBs",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
           "editable": true,
           "error": false,
           "fill": 1,
@@ -1139,12 +1225,99 @@
             "avg": true,
             "current": true,
             "hideEmpty": true,
+            "hideZero": true,
             "max": true,
             "min": false,
             "show": true,
             "total": false,
-            "values": true,
-            "hideZero": true
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceTotalGib.select metric, 'Total Space')",
+              "textEditor": true
+            },
+            {
+              "refId": "B",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedGiB, 'Logical Space Used')"
+            },
+            {
+              "refId": "C",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedPhysicalGiB, 'Pysical Space Used')"
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Space in GB",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "gbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 16,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -1202,11 +1375,101 @@
               "min": null,
               "show": true
             }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_GRAPHITE}",
+          "decimals": 2,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 17,
+          "isNew": true,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": true,
+            "min": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 4,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "refId": "A",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorGiB, 'Hypervisor Snapshots (logical)')"
+            },
+            {
+              "refId": "B",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorPhysicalGiB, 'Hypervisor Snapshots (physical)')"
+            },
+            {
+              "refId": "C",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriGiB, 'Tintri Snapshots (logical)')"
+            },
+            {
+              "refId": "D",
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriPhysicalGiB, 'Tintri Snapshots (physical)')"
+            }
           ],
-          "decimals": 2
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Snapshot Space Used",
+          "tooltip": {
+            "msResolution": true,
+            "shared": true,
+            "sort": 0,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "xaxis": {
+            "show": true
+          },
+          "yaxes": [
+            {
+              "format": "gbytes",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": false
+            }
+          ]
         }
       ],
-      "showTitle": true
+      "showTitle": true,
+      "title": "Additional Detailed Stats"
     }
   ],
   "time": {
@@ -1241,25 +1504,24 @@
   "templating": {
     "list": [
       {
-        "type": "query",
         "datasource": null,
-        "refresh": 0,
-        "name": "VMSTORE",
         "hide": 0,
         "includeAll": false,
         "multi": false,
+        "name": "VMSTORE",
         "query": "tintri.*",
         "refresh": 1,
-        "regex": ""
+        "regex": "",
+        "type": "query"
       }
     ]
   },
   "annotations": {
     "list": []
   },
-  "refresh": "5s",
+  "refresh": false,
   "schemaVersion": 12,
-  "version": 31,
+  "version": 11,
   "links": [],
   "gnetId": null
 }
