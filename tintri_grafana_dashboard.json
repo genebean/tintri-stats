@@ -819,7 +819,7 @@
           "valueName": "current"
         },
         {
-          "title": "Data Reduction",
+          "title": "Total Data Reduction",
           "error": false,
           "span": 2,
           "editable": true,
@@ -828,13 +828,8 @@
           "id": 20,
           "targets": [
             {
-              "target": "tintri.$VMSTORE.vmstore.spaceUsedPhysicalGiB",
+              "target": "tintri.$VMSTORE.vmstore.spaceSavingsFactor",
               "refId": "A",
-              "hide": true
-            },
-            {
-              "target": "divideSeries(tintri.$VMSTORE.vmstore.spaceUsedGiB, #A)",
-              "refId": "B",
               "hide": false
             }
           ],
