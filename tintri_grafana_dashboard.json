@@ -1497,19 +1497,19 @@
           "targets": [
             {
               "refId": "A",
-              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorGiB, 'Hypervisor Snapshots (logical)')"
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorGiB, 'Hypervisor (logical)')"
             },
             {
               "refId": "B",
-              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorPhysicalGiB, 'Hypervisor Snapshots (physical)')"
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsHypervisorPhysicalGiB, 'Hypervisor (physical)')"
             },
             {
               "refId": "C",
-              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriGiB, 'Tintri Snapshots (logical)')"
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriGiB, 'Tintri (logical)')"
             },
             {
               "refId": "D",
-              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriPhysicalGiB, 'Tintri Snapshots (physical)')"
+              "target": "alias(tintri.$VMSTORE.vmstore.spaceUsedSnapshotsTintriPhysicalGiB, 'Tintri (physical)')"
             }
           ],
           "timeFrom": null,
